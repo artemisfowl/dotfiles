@@ -1,0 +1,197 @@
+! to match gnome-terminal "Linux console" scheme
+! foreground/background
+URxvt*termName: rxvt-unicode-256color
+
+!! Colors
+/* #include ".config/colors/wombat" */
+! true transparency (using unagi)
+URxvt.depth: 32
+!URxvt.background: [80]#000000
+
+URxvt*background:  Black
+URxvt*foreground:  White
+
+! black
+URxvt.color0  : #000000
+URxvt.color8  : #555555
+! red
+URxvt.color1  : #AA0000
+URxvt.color9  : #FF5555
+! green
+!URxvt.color2  : #00AA00
+URxvt.color2  : #00CD00
+!URxvt.color10 : #55FF55
+URxvt.color10 : #00FF00
+! yellow
+!URxvt.color3  : #AA5500
+URxvt.color3  : #CDCD00
+!URxvt.color11 : #FFFF55
+URxvt.color11 : #FFFF00
+! blue
+URxvt.color4  : #0000AA
+URxvt.color12 : #5555FF
+! magenta
+URxvt.color5  : #AA00AA
+URxvt.color13 : #FF55FF
+! cyan
+!URxvt.color6  : #00AAAA
+URxvt.color6  : #00CDCD
+!URxvt.color14 : #55FFFF
+URxvt.color14 : #00FFFF
+! white
+URxvt.color7  : #AAAAAA
+URxvt.color15 : #FFFFFF
+
+!Save number lines in the scrollback buffer [default 64]. This resource is limited on most machines to 65535. I am a power-user, so I always use a multiplexer. Tmux if its available, otherwise screen. So I use the scrollback buffer in tmux or screen, which is much nicer.
+URxvt.saveLines:        8000
+
+! Create the window with the specified X window geometry [default 80x24]
+!URxvt*geometry:                         240x84
+URxvt*loginShell:  true
+
+!!-- Xft settings -- !
+ft.dpi:        96
+ft.antialias:  true
+ft.rgba:       rgb
+ft.hinting:    true
+ft.hintstyle:  hintfull
+
+! fonts testings
+!URxvt.font:             xft:inconsolata:pixelsize=14
+!URxvt*font: xft:Monospace:pixelsize=15
+!URxvt*boldFont: xft:Monospace:pixelsize=15
+
+!URxvt*font:        xft:ubuntu mono:size=13:style=medium:antialias=true
+!URxvt*boldFont:    xft:ubuntu mono:bold:size=13:style=medium:antialias=true
+!URxvt*italicFont:    xft:ubuntu mono:italic:size=13:style=medium:antialias=true:autohint=true
+!URxvt*boldItalicFont:    xft:ubuntu mono:bold:italic:size=13:style=medium:antialias=true:autohint=true
+
+!URxvt*font:        xft:terminus:size=14:style=medium:antialias=true
+!URxvt*boldFont:    xft:terminus:bold:size=14:style=medium:antialias=true
+!URxvt*italicFont:    xft:terminus:italic:size=14:style=medium:antialias=true:autohint=true
+!URxvt*boldItalicFont:    xft:terminus:bold:italic:size=14:style=medium:antialias=true:autohint=true
+
+!URxvt*font:        xft:terminus:size=13:antialias=true
+!URxvt*boldFont:    xft:terminus:bold:size=13:antialias=true
+!URxvt*italicFont:    xft:terminus:italic:size=13:antialias=true:autohint=true
+!URxvt*boldItalicFont:    xft:terminus:bold:italic:size=13:antialias=true:autohint=true
+
+! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
+!URxvt*font:                             -xos4-terminus-medium-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize=18
+!URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize=18
+!URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=18
+!URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=18
+!URxvt*letterSpace: -1
+
+
+! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
+/* URxvt.font:                             -xos4-terminess powerline-medium-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize=18 */
+!URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize=18
+!URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=18
+!URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=18
+!URxvt*letterSpace: -1
+
+/* URxvt*font: xft:Terminus,xft:Terminess Powerline:size=18:style=medium:antialias=true */
+/* URxvt.font: xft:Terminess Powerline:size=13 */
+!this works, renders ok power fonts without bugs
+
+/* URxvt*font: xft:Terminess\ Powerline:style=medium:pixelsize=8;antialias:True */
+/* URvt.font: xft:Terminess Powerline:size=16:hinting=True;antialias:True */
+/* URxvt.boldFont: xft:Terminess Powerline:size=16:bold;hinting=True;antialias:True */
+
+!! Hack
+/* URxvt.font:             xft:Hack:size=12:bold;hinting=False;antialias:True,xft:PowerlineSymbols,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:medium;antialias=False,xft:WenQuanYi Zen Hei-12:medium;antialias=True,xft:HanaMinA-12:medium;antialias:True,xft:HanaMinB-12:medium;antialias:True,xft:HanaMinPlus-12:medium;antialias:True */
+/* URxvt.font:             xft:Hack:antialias=true:pixelsize=16;hinting=true */
+
+
+!! This works nice for hack and it looks same as gvim
+/* URxvt.font:             xft:Hack:autohint=true:antialias=true:pixelsize=16 */
+/* URxvt.boldFont:         xft:Hack:style=bold:autohint=true:antialias=true:pixelsize=16 */
+
+/* URxvt.boldFont:         xft:Hack:style=bold:antialias=true */
+/* URxvt.boldFont:             xft:Hack:size=13:bold;hinting=True;antialias:True,xft:Font Awesome:size=10,xft:WenQuanYi Bitmap Song-12:bold;antialias=False,xft:WenQuanYi Zen Hei-12:bold;antialias=True,xft:HanaMinA-12:bold;antialias:True,xft:HanaMinB-12:bold;antialias:True,xft:HanaMinPlus-12:bold;antialias:True */
+/* URxvt.letterSpace: -1 */
+/* URxvt.letterSpace: 0 */
+/* URxvt.lineSpace: 0 */
+
+URxvt.letterSpace: -1
+URxvt.lineSpace: 0
+!
+
+/* URxvt*font: xft:Terminess\ Powerline:style=medium:pixelsize=18 */
+
+/* URxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12 */
+/* URxvt.boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12 */
+
+
+/* URxvt.font: xft:Terminess Powerline:hinting=true;antialias=true:size=13 */
+/* URxvt.boldFont: -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:18 */
+
+/* URxvt.italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=15 */
+/* URxvt.boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=15 */
+
+! From askapache - tuned for 24"
+URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:14
+URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:14
+URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=14
+URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=14
+! From askapache - suitable for laptops monitors or when smaller monitor real estate
+/* URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12 */
+/* URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12 */
+/* URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12 */
+/* URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12 */
+
+! This work okay too!
+/* URxvt.font: xft:Terminess Powerline:hinting=true;antialias=true:size=13 */
+/* URxvt.boldFont: -xos4-terminus-bold-*-*-*-18-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:17 */
+/* URxvt.italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=15 */
+/* URxvt.boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=15 */
+
+! control +v/c for copy paste - https://bbs.archlinux.org/viewtopic.php?id=121797
+! Comma-separated list(s) of perl extension scripts (default: "default") to use in this terminal instance, blank disables. By setting these both to blank, it completely disables perl from being initialized, thus much faster and smaller footprint. Plus it is more secure.
+!URxvt*perl-ext:
+!URxvt*perl-ext-common:
+!URxvt.perl-ext-common:  default,tabbed,clipboard,matcher
+!URxvt.perl-ext-common:  default,url-select,keyboard-select,matcher,clipboard
+/* URxvt.matcher.button:   1 */
+! Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
+!URxvt.iso14755 : false
+
+! note: to paste from PRIMARY buffer use Ctrl + Insert and to copy use Alt + C
+!URxvt.keysym.C-C: perl:clipboard:copy
+!URxvt.keysym.C-V: perl:clipboard:paste
+!URxvt.keysym.C-A-v: perl:clipboard:paste_escaped
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+
+URxvt.urlLauncher:      google-chrome
+kRxvt.url-select.underline: true
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+
+
+! Do not scroll with output
+URxvt*scrollTtyOutput:  false
+! Do not scroll with scrollback buffer when tty recieves new lines, adds some speed.. also, I use tmux scrollback buffers.
+URxvt*scrollWithBuffer:  false
+! For speed. When receiving lots of lines, urxvt will only scroll once in a while (around 60x/sec), resulting in fewer updates. This can result in urxvt not ever displaying some of the lines it receives
+URxvt*skipScroll:  false
+! Scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+! Disable the scrollbar.. why waste valuable screen real-estate when you should be using tmux scrollback?
+URxvt*scrollBar:  false
+! Fade the text by the given percentage when focus is lost. This is neat, when I switch to a different window, or switch to a different machine ala synergy, it will fade the screen slightly.
+URxvt*fading:  30
+! Use visual bell on receipt of a bell character. Helpful to be used with inputrc and tmux.
+URxvt*visualBell:  true
+! Use the specified colour to disp1ay underlined characters when the foreground colour is the default. Makes it easier to notice, rxvt-unicode authors choice as well.
+URxvt*colorUL:  yellow
+URxvt*underlineColor:  yellow
+
+!  - cursor
+URxvt*cursorColor: #DCDCCC
+
+! Specify a command pipe for vt100 printer [default lpr]. Use Print to initiate a screen dump to the printer and Ctrl-Print or Shift-Print to include the scrollback
+URxvt*print-pipe:  cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
