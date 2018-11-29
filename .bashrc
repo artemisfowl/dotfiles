@@ -91,6 +91,7 @@ export PATH="$exec_path/sublime_text_3:$PATH"
 export PATH="$exec_path/youtube-dl:$PATH"
 export PATH="$exec_path/ebook-reader:$PATH"
 export PATH="$exec_path/cerebro:$PATH"
+export PATH="$exec_path/rfc:$PATH"
 
 # Alias for sublime text 3
 alias sublime='sublime_text'
@@ -114,23 +115,38 @@ alias wef='dev-tmux.sh 2'
 alias wex='dev-tmux.sh 6'
 
 # Alias for connecting to digital ocean
-alias sshdo='ssh root@127.0.0.1'
+alias sshdo='ssh root@139.59.28.13'
 
 # For screen
-case "$TERM" in
-    screen*) PROMPT_COMMAND='echo -ne "\033k\033\0134"'
-esac
+#case "$TERM" in
+    #screen*) PROMPT_COMMAND='echo -ne "\033k\033\0134"'
+#esac
 
 # Setting up the default editor
 export EDITOR="/usr/local/bin/vim"
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Alias for git repository viewer
+alias grv='~/data/programs/nix_execs/grv/grv'
+
+# Alias for the bash based file manager
+alias f='~/data/programs/nix_execs/fff/fff'
+
+# Alias for Krita
+alias krita='~/data/programs/nix_execs/krita/krita-4.1.5-x86_64.appimage'
+
+# Alias for fff
+alias fff='~/data/programs/nix_execs/fff/fff'
+
+# Alias for nnn
+alias nnn='~/data/programs/nix_execs/nnn/nnn'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -155,4 +171,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+PLAN9=/home/sb/data/programs/repo_clone/git/plan9port export PLAN9
+PATH=$PATH:$PLAN9/bin export PATH
 
